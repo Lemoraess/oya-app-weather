@@ -21,6 +21,10 @@ function currentData(response) {
 
   let iconElement = document.querySelector("#iconData");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="emojiData">`;
+
+  let feelsLikeElement = document.querySelector("#feelsLike");
+  let feelsLike = Math.round(response.data.temperature.feels_like);
+  feelsLikeElement.innerHTML = `${feelsLike}°C`;
 }
 
 function showDay(date) {
