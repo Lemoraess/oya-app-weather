@@ -1,0 +1,27 @@
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/870/original/Bufalo_pic.jpeg?1741698352");
+  background-repeat: repeat;
+  background-size: 500px;
+  text-align: center;
+}
+.infoOya {
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 16px;
+}
+a {
+  color: plum;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.container {
+  background: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  margin: 70px auto;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  padding: 50px;
+  border-radius: 20px;
+  font-family: "Quicksand", sans-serif;
+}
