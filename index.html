@@ -16,22 +16,37 @@
 <body>
     <div class="container">
         <header>
-            <form>
-                <input type="search" placeholder="Enter a city" required>
-                <input type="submit" value="Look at the Weather">
+            <form class="searchForm">
+                <input type="search" placeholder="Enter a city" required class="searchBox">
+                <input type="submit" value="Search" class="searchButton">
             </form>
         </header>
         <main>
-            <h1>Paris</h1>
-            <p>Monday 17:01, moderate rain <br />
-                Humidity: 87%, Wind: 7.2km/h</p>
+            <div class="resultData">
+                <div>
+                    <h1 class="cityData">Paris</h1>
+                    <p class="detailsData">Monday <strong> 17:01</strong>, moderate rain <br />
+                        Humidity: <strong> 87% </strong>, Wind: <strong> 7.2km/h</strong></p>
+                </div>
+                <div class="temperatureData">
+                    <div class="emojiData">🌤️</div>
+                    <div class="degreesData">12</div>
+                    <div class="unitData">°C</div>
+                </div>
+            </div>
         </main>
 
-        <footer>Coded by <a href="https://github.com/Lemoraess" target="_blank">Lenise M Santana</a>, is open-sourced on
-            <a href="https://github.com/Lemoraess/oya-app-weather" target="_blank">GitHub</a> and hosted on <a
-                href="https://oyaweatherapp.netlify.app/" target="_blank">Netlify</a>.
+        <footer>Coded by <a href="https://github.com/Lemoraess" target="_blank"
+                title="Access to GitHub Perfil Lenise">Lenise M Santana</a>, is open-sourced on
+            <a href="https://github.com/Lemoraess/oya-app-weather" target="_blank"
+                title="Access to project open-sourced on GitHub">GitHub</a> and hosted on <a
+                href="https://oyaweatherapp.netlify.app/" target="_blank"
+                title="Access Weather Oyá App Netlify site">Netlify</a>.
+            <br />
+            <h6> <a href="https://en.wikipedia.org/wiki/%E1%BB%8Cya" target="_blank"
+                    title="Learn more about Oyá on wikipedia" class="infoOya">Eparrei Oyá!</a>
+            </h6>
         </footer>
-        <h6> <a href="https://en.wikipedia.org/wiki/%E1%BB%8Cya" target="_blank" class="infoOya">Eparrei Oyá!</a></h6>
     </div>
     <script src="script.js"></script>
 </body>
