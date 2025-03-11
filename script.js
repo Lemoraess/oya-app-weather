@@ -18,6 +18,9 @@ function currentData(response) {
   let date = new Date(response.data.time * 1000);
   let timeElement = document.querySelector("#timeData");
   timeElement.innerHTML = showDay(date);
+
+  let iconElement = document.querySelector("#iconData");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="emojiData">`;
 }
 
 function showDay(date) {

@@ -75,15 +75,15 @@ footer {
   display: flex;
 }
 .emojiData {
-  font-size: 40px;
-  margin-top: 40px;
+  width: 88px;
+  height: 88px;
 }
 .degreesData {
   font-size: 88px;
   font-weight: bold;
 }
 .unitData {
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 24px;
 }
 .infoOya {
