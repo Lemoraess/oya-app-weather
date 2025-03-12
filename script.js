@@ -59,6 +59,12 @@ function showCity(event) {
   apiCall(searchBox.value);
 }
 
+function showDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+
 function getWeek(city) {
   let apiKey = "5btac2eb2ed52b236021789ofe9a3348";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
@@ -68,20 +74,27 @@ function getWeek(city) {
 function displayWeek(response) {
   console.log(response.data);
 
-  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   let weekHtml = "";
 
-  days.forEach(function (day) {
-    weekHtml =
-      weekHtml +
-      `<div class="weatherWeekDay">
-                    <div class="weatherDate">${day}</div>
-                    <div class="weatherIcon">🌤️</div>
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      weekHtml =
+        weekHtml +
+        `<div class="weatherWeekDay">
+                    <div class="weatherDate">${showDay(day.time)}</div>
+                    <div>
+                    <img src="${day.condition.icon_url}" class="weatherIcon" />
+                    </div>
                     <div class="weatherTemperatures">
-                        <div class="weatherTemperature"> <strong>15°</strong></div>
-                        <div class="weatherTemperature">9°</div>
+                        <div class="weatherTemperature"> <strong>${Math.round(
+                          day.temperature.maximum
+                        )}</strong></div>
+                        <div class="weatherTemperature">${Math.round(
+                          day.temperature.minimum
+                        )}°</div>
                     </div>
                 </div>`;
+    }
   });
   let weatherWeek = document.querySelector("#weatherWeek");
   weatherWeek.innerHTML = weekHtml;

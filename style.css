@@ -113,8 +113,10 @@ footer {
 }
 
 .weatherIcon {
-  text-align: center;
-  font-size: 38px;
+  width: 58px;
+  height: 58px;
+  display: block;
+  margin: 0 auto;
 }
 .weatherTemperatures {
   display: flex;
