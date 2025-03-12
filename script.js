@@ -59,7 +59,7 @@ function showCity(event) {
   apiCall(searchBox.value);
 }
 
-function showDay(timestamp) {
+function getWeekDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[date.getDay()];
@@ -72,8 +72,6 @@ function getWeek(city) {
 }
 
 function displayWeek(response) {
-  console.log(response.data);
-
   let weekHtml = "";
 
   response.data.daily.forEach(function (day, index) {
@@ -81,14 +79,15 @@ function displayWeek(response) {
       weekHtml =
         weekHtml +
         `<div class="weatherWeekDay">
-                    <div class="weatherDate">${showDay(day.time)}</div>
+                    <div class="weatherDate">${getWeekDay(day.time)}</div>
                     <div>
                     <img src="${day.condition.icon_url}" class="weatherIcon" />
                     </div>
                     <div class="weatherTemperatures">
                         <div class="weatherTemperature"> <strong>${Math.round(
                           day.temperature.maximum
-                        )}</strong></div>
+                        )}
+°</strong></div>
                         <div class="weatherTemperature">${Math.round(
                           day.temperature.minimum
                         )}°</div>
