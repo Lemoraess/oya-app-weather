@@ -25,6 +25,8 @@ function currentData(response) {
   let feelsLikeElement = document.querySelector("#feelsLike");
   let feelsLike = Math.round(response.data.temperature.feels_like);
   feelsLikeElement.innerHTML = `${feelsLike}°C`;
+
+  getWeek(response.data.city);
 }
 
 function showDay(date) {
@@ -57,7 +59,15 @@ function showCity(event) {
   apiCall(searchBox.value);
 }
 
-function displayWeek() {
+function getWeek(city) {
+  let apiKey = "5btac2eb2ed52b236021789ofe9a3348";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayWeek);
+}
+
+function displayWeek(response) {
+  console.log(response.data);
+
   let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   let weekHtml = "";
 
@@ -81,4 +91,3 @@ let searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", showCity);
 
 apiCall("Ubatuba");
-displayWeek();
