@@ -57,7 +57,28 @@ function showCity(event) {
   apiCall(searchBox.value);
 }
 
+function displayWeek() {
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  let weekHtml = "";
+
+  days.forEach(function (day) {
+    weekHtml =
+      weekHtml +
+      `<div class="weatherWeekDay">
+                    <div class="weatherDate">${day}</div>
+                    <div class="weatherIcon">🌤️</div>
+                    <div class="weatherTemperatures">
+                        <div class="weatherTemperature"> <strong>15°</strong></div>
+                        <div class="weatherTemperature">9°</div>
+                    </div>
+                </div>`;
+  });
+  let weatherWeek = document.querySelector("#weatherWeek");
+  weatherWeek.innerHTML = weekHtml;
+}
+
 let searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", showCity);
 
 apiCall("Ubatuba");
+displayWeek();
