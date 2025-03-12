@@ -99,3 +99,30 @@ footer {
   font-size: 16px;
   color: #506375;
 }
+.weatherWeek {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.weatherDate {
+  color: #506375;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.weatherIcon {
+  text-align: center;
+  font-size: 38px;
+}
+.weatherTemperatures {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  color: #921f37;
+  margin-top: 10px;
+}
+.weatherTemperature {
+  padding: 0 10px;
+}
