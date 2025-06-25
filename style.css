@@ -33,12 +33,16 @@ footer {
 }
 
 .searchBox {
-  background-color: rgba(248, 132, 111, 0.4);
+  background-color: rgba(248, 132, 111, 0.5);
   border: none;
   border-radius: 7px;
   width: 70%;
   padding: 20px;
   font-size: 14px;
+}
+
+input::placeholder {
+  color: white;
 }
 
 .searchButton {
