@@ -31,20 +31,18 @@ footer {
   border-radius: 20px;
   font-family: "Quicksand", sans-serif;
 }
+
 .searchBox {
-  display: inline;
-}
-.searchBox {
-  background-color: rgba(166, 93, 115, 0.4);
-  color: white;
+  background-color: rgba(248, 132, 111, 0.4);
   border: none;
   border-radius: 7px;
   width: 70%;
   padding: 20px;
   font-size: 14px;
 }
+
 .searchButton {
-  background-color: #f8846f;
+  background-color: rgb(248, 132, 111);
   color: white;
   border: none;
   border-radius: 7px;
