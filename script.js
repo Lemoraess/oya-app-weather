@@ -79,20 +79,21 @@ function displayWeek(response) {
       weekHtml =
         weekHtml +
         `<div class="weatherWeekDay">
-                    <div class="weatherDate">${getWeekDay(day.time)}</div>
-                    <div>
-                    <img src="${day.condition.icon_url}" class="weatherIcon" />
-                    </div>
-                    <div class="weatherTemperatures">
-                        <div class="weatherTemperature"> <strong>${Math.round(
-                          day.temperature.maximum
-                        )}
-°</strong></div>
-                        <div class="weatherTemperature">${Math.round(
-                          day.temperature.minimum
-                        )}°</div>
-                    </div>
-                </div>`;
+            <div class="weatherDate">${getWeekDay(day.time)}</div>
+              <div>
+                <img src="${day.condition.icon_url}" class="weatherIcon" />
+              </div>
+              <div class="weatherTemperatures">
+                 <div class="weatherTemperature">
+                  <strong>${Math.round(day.temperature.maximum)}°</strong>
+                 </div>
+                  <div class="weatherTemperature">${Math.round(
+                    day.temperature.minimum
+                  )}°
+                </div>
+              </div>
+            </div>
+          </div>`;
     }
   });
   let weatherWeek = document.querySelector("#weatherWeek");
